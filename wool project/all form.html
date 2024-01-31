@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login Page</title>
+    <style>
+
+        body {
+
+            background-color: rgb(126, 177, 194);
+        }
+
+        #services {
+            display: flex;
+            margin: 0px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .box {
+            font-family: 'Poppins', sans-serif;
+            border: 2px solid red;
+            margin: 80px;
+            border-radius: 20px;
+            height: 400px;
+            padding:20px;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            background-color: bisque;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+            background-color: antiquewhite;
+        }
+
+        .box img {
+            display: block;
+            margin: auto;
+        }
+
+        .box p {
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        #h-primary {
+            text-align: center;
+            font-size: 40px;
+            padding-top: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .h-secondary, .h-secondary a{
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            font-size: 35px;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <section id="services-container">
+        <h1 id="h-primary">Form</h1>
+        <div id="services">
+            <div class="box">
+                <h1 class="h-secondary"><a href="http://localhost/FARM/farm.php">Farmer</a></h1>
+                <img src="/img/1.jpg" alt="Order ">
+ 
+            </div>
+            <div class="box">
+                <h1 class="h-secondary"><a href="http://localhost/FARM/transport.php">Transport</a></h1>
+                <img src="img/2.jpg" alt="">
+
+            </div>
+            <div class="box">
+                <h1 class="h-secondary"><a href="http://localhost/FARM/company.php">Company feedback</a></h1>
+                <img src="img/3.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+
+
+
+</body>

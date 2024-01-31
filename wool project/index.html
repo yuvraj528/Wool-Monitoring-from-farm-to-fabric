@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm to Fabric Wool Monitoring</title>
+    <script src="./script.js"> </script>   
+    <style>
+        body{
+            
+            background-color: rgba(133, 194, 243, 0.5);
+            background-repeat: no-repeat;
+            background-size: 1500px;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+ 
+        nav a {
+            text-decoration:currentColor;
+            color: #fff;
+            font-weight: bold;
+                }
+
+        #button_container{
+            display: flex;
+        }
+
+        #logo{
+            
+            position: relative;
+            top: 0;
+            right: 0;
+            border-radius: 100%;
+            height: 90px;
+        }
+
+        #gps {
+            border-radius: 100%;
+            height: 90px;
+            
+        }
+
+       
+
+        .card-container1 {
+            display: flex;
+            justify-content: space-between; 
+        }
+
+        
+        .card {
+            width: calc(50% - 10px); 
+            margin: 5px; 
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h2{
+            color: black;
+        }
+
+        p{
+            font-size: large;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <script>function initMap() {
+        const map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 32.7266, lng: 74.8570 },
+            zoom: 12
+        });
+    
+        // Simulated GPS data (replace with real data)
+        const gpsCoordinates = [
+            {lat: -34.397, lng: 150.644},
+            {lat: -34.297, lng: 150.744},
+            // Add more coordinates as needed
+        ];
+    
+        let currentIndex = 0;
+    
+        function updateMarker() {
+            const coords = gpsCoordinates[currentIndex];
+            const marker = new google.maps.Marker({
+                position: coords,
+                map: map,
+                title: `Latitude: ${coords.lat}, Longitude: ${coords.lng}`
+            });
+    
+            map.setCenter(coords);
+    
+            currentIndex++;
+            if (currentIndex >= gpsCoordinates.length) {
+                currentIndex = 0;
+            }
+    
+            setTimeout(() => {
+                marker.setMap(null);
+                updateMarker();
+            }, 2000); // Update every 2 seconds
+        }
+    
+        updateMarker();
+    }
+
+
+    </script>
+    
+    
+ 
+        <nav id="left" class="column" style="background-color: rgb(46, 33, 33);color: #fff;" >
+			<h1 id="headd" style="font-size:50px ;"> <img id="logo" src="img/logoo.jpg">
+                Farm to Fabric Wool Monitoring</h1>
+			<ul id="button_container">
+				
+				<li><button class="but1" style="font-size:xx-large;border-radius: 5px;background-color: red;color: white;box-shadow: 5px 5px 6px 2px rgba(0,0,0,.8)" ><a href="img/wool.jpg"><b>Production</b> </a></button></li>
+				<li><button class="but2" style="font-size:xx-large;border-radius: 5px;background-color: red;color: white;box-shadow: 5px 5px 6px 2px rgba(0,0,0,.8)"><a href="img/process.jpg"><b>Processing</b></a></button></li>
+				<li><button class="but3" style="font-size:xx-large;border-radius: 5px;background-color: red;color: white;box-shadow: 5px 5px 6px 2px rgba(0,0,0,.8)"><a href="wool/index.html"><b>GPS track.</b></a></button></li>
+				<li><button class="but4" style="font-size:xx-large;border-radius: 5px;background-color: red;color: white;box-shadow: 5px 5px 6px 2px rgba(0,0,0,.8)"><a href="./all form.html"><b>Forms</b></a></button></li>
+			</ul>
+        </nav>
+        <hr >
+   
+         <div class="card-container1">
+                <div class="card" >
+                    <h2 style="font-family: cursive;"><a href="img/wool.jpg">Production</a></h2>
+                    <p><b>Production sites in INDIA</b></p>
+                    
+                </div>
+                <div class="card" >
+                    <h2 style="font-family: cursive;"><a href="img/process.jpg">Processing</a></h2>
+                    <p><b>Learn about our state-of-the-art processing facilities where the wool is cleaned, spun, and prepared for fabric production.</b></p>
+                    
+                </div>
+               
+                <div class="card">
+                    <h2 style="font-family: cursive;"><a href="all form.html">FORMS</a></h2>
+                    <p><b>Various types of forms to get data</b></p>
+                </div>
+         </div>
+
+         <div class="card-container1">
+            <div class="card" style="background-image: url(img/Google-Maps.jpg);">
+                <h2 style="font-family: cursive;"><a href="wool/index.html">GPS Tracking</a></h2>
+                <p><b>location of farmer</b></p>
+                <img id="gps" src="img/OIP.jpeg">
+            </div>
+
+         </div>
+
+    
+  
+    <footer>
+        <p>&copy; 2023 Farm to Fabric Wool Monitoring</p>
+    </footer>
+</body>
+</html>
+
+    
